@@ -1,0 +1,511 @@
+@font-face {
+    font-family: 'RotondaCBold';
+    src: url('../fonts/RotondaCBold.eot');
+    src: url('../fonts/RotondaCBold.eot') format('embedded-opentype'), url('../fonts/RotondaCBold.woff2') format('woff2'), url('../fonts/RotondaCBold.woff') format('woff'), url('../fonts/RotondaCBold.ttf') format('truetype'), url('../fonts/RotondaCBold.svg#RotondaCBold') format('svg');
+}
+@font-face {
+    font-family: 'RobotoBold';
+    src: url('../fonts/RobotoBold.eot');
+    src: url('../fonts/RobotoBold.eot') format('embedded-opentype'), url('../fonts/RobotoBold.woff2') format('woff2'), url('../fonts/RobotoBold.woff') format('woff'), url('../fonts/RobotoBold.ttf') format('truetype'), url('../fonts/RobotoBold.svg#RobotoBold') format('svg');
+}
+@font-face {
+    font-family: 'RobotoLight';
+    src: url('../fonts/RobotoLight.eot');
+    src: url('../fonts/RobotoLight.eot') format('embedded-opentype'), url('../fonts/RobotoLight.woff2') format('woff2'), url('../fonts/RobotoLight.woff') format('woff'), url('../fonts/RobotoLight.ttf') format('truetype'), url('../fonts/RobotoLight.svg#RobotoLight') format('svg');
+}
+@font-face {
+    font-family: 'RobotoMedium';
+    src: url('../fonts/RobotoMedium.eot');
+    src: url('../fonts/RobotoMedium.eot') format('embedded-opentype'), url('../fonts/RobotoMedium.woff2') format('woff2'), url('../fonts/RobotoMedium.woff') format('woff'), url('../fonts/RobotoMedium.ttf') format('truetype'), url('../fonts/RobotoMedium.svg#RobotoMedium') format('svg');
+}
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+}
+
+
+/**************************************************************************************/
+.wrapper{width: 100%;overflow: hidden;position: absolute;}
+#clear{clear: both;}
+.mainBlock{
+    width: 120%;
+    margin-left: -10%;
+    max-height: 980px;
+    overflow: hidden;
+    background-image: url(../img/block1_bg1.png),
+    linear-gradient(to bottom, rgba(240,77,81,1) 0%, rgba(240,77,81,1) 100%);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top center, right;
+    background-size: 90%, cover;
+    border-bottom-right-radius:220% 130%;
+    border-bottom-left-radius:220% 130%;
+
+}
+.mainBlock>.menuWrapper{
+    width:100%;
+    /*background: linear-gradient(to bottom, rgba(240,77,81,1) 0%, rgba(255,255,255,0) 100%);*/
+    background: linear-gradient(to bottom, rgba(240,77,81,1) 0%, rgba(240,77,81,1) 100%);
+    outline: 0px solid green;
+    position: fixed;
+    left: 0;
+    top:0;
+    padding: 10px 0 9px;
+    z-index: 99;
+}
+.menuWrapper>.menu,.mainBlock>.textBlock, .opportunities>.allOpp, .partners>.advantages, .partners>.partnersLogo, .partners>.secondForm, .partners>.footerMenu{
+    max-width: 1170px;
+    width:80%;
+    margin: 0 auto;
+    outline: 0px solid yellow;
+}
+.menuWrapper>.menu{
+    width: 96%;
+    text-align: right;
+}
+.menuWrapper>.menu>.logo{
+    float: left;
+    display: block;
+}
+.menuWrapper>.menu>.page, .menuWrapper>.menu>.button{
+    display: inline-block;
+}
+.menuWrapper>.menu>.page li a{
+    color: black;
+    font-family: 'RobotoMedium';
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.menuWrapper>.menu>.page li a:hover{
+    text-decoration: underline;
+}
+.menuWrapper>.menu>.page li{
+    margin-right: 30px;
+}
+.menuWrapper>.menu>.page li{
+    display: inline-block;
+}
+.menuWrapper>.menu>.button>input[type='button']{
+    height: 40px !important;
+    font-size: 12px !important;
+}
+
+/**************************************************************************************/
+.mainBlock>.textBlock{
+    background: transparent url(../img/block1_bg2.png) no-repeat center 70% / 100%;
+    padding: 100px 0 7%;
+}
+.mainBlock>.textBlock::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.mainBlock>.textBlock>#text{
+    padding-left: 9%;
+    width: 47%;
+    float: left;
+}
+.mainBlock>.textBlock>#text h1{
+    font-family: 'RotondaCBold';
+    font-size: 44px;
+    color: white;
+    margin-bottom: 20px;
+}
+.mainBlock>.textBlock>#text h2{
+    font-family: 'RobotoLight';
+    font-size: 25px;
+    color: white;
+    font-weight: 100;
+    margin-bottom: 40px;
+}
+.mainBlock>.textBlock>#text h3{
+    font-family: 'RobotoLight';
+    font-size: 17px;
+    color: black;
+    margin-bottom: 30px;
+}
+.mainBlock>.textBlock>#image{
+    width: 40%;
+    float: left;
+    text-align: right;
+    padding: 0 2%;
+}
+.mainBlock>.textBlock>#image img{
+    width:85%;
+}
+/*form*/
+.mainBlock>.textBlock>#text>form p:nth-child(1){
+    margin-bottom: 15px;
+}
+.mainBlock>.textBlock>#text>form p label{
+    display: block;
+    font-family: 'RobotoLight';
+    font-size: 13px;
+    margin-bottom: 7px;
+    color: rgba(0,0,0,.6);
+    font-weight: bold;
+}
+.mainBlock>.textBlock>#text>form p:nth-child(2){
+    margin-bottom: 30px;
+}
+
+.mainBlock>.textBlock>#text>form p input[type='text']{
+    border: 1px solid #ce4040;
+    border-radius: 5px;
+    height: 45px;
+    background-color: rgba(255,255,255,.5);
+    width: 85%;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+.mainBlock>.textBlock>#text>form p:nth-child(3){
+    text-align: right;
+    padding-right: 15%;
+}
+.mainBlock>.textBlock>#text>form p input[type='submit'] , .menuWrapper>.menu>.button>input[type='button']{
+    border-radius: 5px;
+    height: 45px;
+    background-color: rgba(255,255,255,1);
+    font-family: 'RobotoBold';
+    color: black;
+    text-transform: uppercase;
+    padding: 0 35px;
+    font-size: 14px;
+    box-shadow: 4px 4px 7px rgba(0,0,0,.2);
+}
+/*form*/
+/**************************************************************************************/
+.opportunities{
+    width: 120%;
+    margin-left: -10%;
+    max-height: 980px;
+    /*height: 300px;*/
+    overflow: hidden;
+    background-image: url(../img/block2_bg1.png),
+    linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%);
+    background-repeat: no-repeat, no-repeat;
+    background-position: -100px top, right;
+    background-size: 100%, cover;
+    border-bottom-right-radius:220% 130%;
+    border-bottom-left-radius:220% 130%;
+    padding: 6% 0 0;
+    position: relative;
+    z-index: 1;
+}
+.opportunities>.allOpp{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-bottom: 5%;
+}
+.opportunities>h2{
+    font-family: 'RotondaCBold';
+    font-size: 28px;
+    color: black;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.opportunities>.allOpp #opp{
+    /*width: 46%;
+    float: left;*/
+    box-sizing: border-box;
+    padding: 0 5%;
+    outline: 0px solid red;
+    margin: 28px 2%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.opportunities>.allOpp #opp::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.opportunities>.allOpp>#opp img{
+    width:150px;
+    float: left;
+    margin-right: 15px;
+}
+.opportunities>.allOpp>#opp h3{
+    font-family: 'RobotoMedium';
+    font-size: 16px;
+    color: black;
+    margin-bottom: 30px;
+}
+.opportunities>.allOpp #opp p{
+    font-family: 'RobotoLight';
+    font-size: 15px;
+    color: #777777;
+}
+/**************************************************************************************/
+.partners{
+    width: 120%;
+    margin-left: -10%;
+    /*height: 500px;*/
+    overflow: hidden;
+    background-image: url(../img/block3_bg1.png),
+    linear-gradient(to bottom, #ececec 0%, #fafafa 100%);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0 top, right;
+    background-size: 85%, cover;
+    margin-top: -20%;
+    position: relative;
+    z-index: 0;
+    padding-top: 26%;
+}
+.partners>h2{
+    font-family: 'RotondaCBold';
+    font-size: 28px;
+    color: black;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.partners>.advantages{
+    width: 50%;
+    max-width: 800px;
+    margin-bottom: 6%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1.5em;
+}
+.partners>.advantages>#adv1{
+    box-sizing: border-box;
+    padding: 5% 5%;
+    outline: 0px solid red;
+    /* margin: 28px 2%; */
+    background-color: white;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 4px 4px 7px rgba(0,0,0,.07);
+}
+.partners>.advantages>#adv1::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.partners>.advantages>#adv1 h3{
+    font-family: 'RobotoBold';
+    font-size: 28px;
+    color: #f04d51;
+    margin-bottom: 5px;
+}
+.partners>.advantages>#adv1 h4{
+    font-family: 'RobotoLight';
+    font-size: 16px;
+    color: #f04d51;
+    margin-bottom: 20px;
+}
+.partners>.advantages>#adv1 p{
+    font-family: 'RobotoLight';
+    font-size: 14px;
+    color: black;
+}
+
+.partners>.partnersLogo{
+	margin-bottom: 90px;
+}
+.partners>.partnersLogo>#logo{
+    margin-bottom: 30px;
+    text-align: center;
+}
+.partners>.partnersLogo>#logo>#slide{
+    display: inline;
+}
+.partners>.partnersLogo>#logo>#slide img{
+    max-width: 130px;
+    display: inline-block;
+    margin: 0 15px;
+}
+.partners>.partnersLogo>#bullet{
+    text-align: center;
+    margin-bottom: 100px;
+}
+.partners>.partnersLogo>#bullet span{
+    max-width: 15px;
+    border-radius: 15px;
+    background-color: gray;
+    height: 15px;
+}
+
+.partners>.secondForm{
+    text-align: center;
+    position: relative;
+    margin-bottom: 50px;
+}
+.partners>.secondForm>img{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    z-index: -1;
+    top: -8%;
+    left: 12%;
+}
+.partners>.secondForm>#roundForm{
+    background-color: white;
+    border-radius: 50%;
+    width: 550px;
+    height: 550px;
+    margin: 0 auto;
+    padding: 80px 10%;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 30px rgba(0,0,0,.1);
+}
+.partners>.secondForm>#roundForm h2{
+    font-family: 'RotondaCBold';
+    font-size: 26px;
+    color: black;
+    margin-bottom: 30px;
+}
+.partners>.secondForm>#roundForm h3{
+    font-family: 'RobotoLight';
+    font-size: 15px;
+    color: black;
+    margin-bottom: 10px;
+    text-align: left;
+}
+.partners>.secondForm>#roundForm form label{
+    font-family: 'RobotoMedium';
+    font-size: 12px;
+    color: black;
+    margin: 20px 0 5px;
+    text-align: left;
+    display: block;
+    text-transform: uppercase;
+}
+.partners>.secondForm>#roundForm form input[type='text']{
+    display: block;
+    background-color: #eee;
+    width: 100%;
+    border: 1px solid #b5b5b5;
+    border-radius: 3px;
+    height: 35px;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+.partners>.secondForm>#roundForm form input[type='submit']{
+    display: block;
+    width: 100%;
+    background-color: #ef4046;
+    border-radius: 3px;
+    margin-top: 20px;
+    height: 40px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: 'RobotoMedium';
+    box-shadow: 3px 3px 12px rgba(0,0,0,.15);
+}
+
+
+.partners>.footerMenu{
+    margin-bottom: 20px;
+    color: #f04d51;
+}
+.partners>.footerMenu>#copyright,.partners>.footerMenu>#menu,.partners>.footerMenu>#menu li,.partners>.footerMenu>#mail{
+    display: inline-block;
+}
+.partners>.footerMenu>#copyright{
+    font-family: 'RobotoMedium';
+    font-size: 14px;
+    margin-right: 13%;
+}
+.partners>.footerMenu>#menu{width: 50%;}
+.partners>.footerMenu>#menu li{
+    margin-right: 13%;
+}
+.partners>.footerMenu>#menu a{
+    font-family: 'RobotoLight';
+    font-size: 14px;
+    color: #f04d51;
+}
+.partners>.footerMenu>#mail{ float: right;}
+.partners>.footerMenu>#mail a{
+    font-family: 'RobotoLight';
+    font-size: 14px;
+    color: #f04d51;
+}
+
+/**************************************************************************************/
+@media screen and (max-width: 1024px) {
+  .mainBlock>.textBlock>#image{
+	  padding:0;
+  }
+  .mainBlock>.textBlock>#image img{
+	  width:100%;
+  }
+  .item>a>img{
+	  
+  }
+}
+
+@media screen and (max-width: 768px) {
+	.mainBlock {
+	border-bottom-right-radius: 220% 80% !important;
+    border-bottom-left-radius: 220% 80% !important;
+	}
+	.opportunities{
+	border-bottom-right-radius: 220% 60% !important;
+    border-bottom-left-radius: 220% 60% !important;
+	}
+	
+	.mainBlock>.textBlock>#image{
+	  display:none;
+	}
+	.mainBlock>.textBlock>#text {
+		width:100%;
+		box-sizing: border-box;
+	}
+	.mainBlock>.textBlock>#text>form p:nth-child(3) {
+		text-align: center;
+	}
+	
+	.opportunities {
+		max-height: 1100px;
+		padding: 4% 0 0 !important;
+	}
+	.opportunities>.allOpp {
+    grid-template-columns: repeat(1,1fr);
+		margin-bottom: 7% !important;
+	}
+	.opportunities>.allOpp #opp {
+		margin: 5px 2% !important;
+	}
+	
+	.partners>.advantages {
+		width: 70% !important;
+	}
+	
+	.item>#simpleBlock>a img{
+	display:inline-block !important;
+	margin: 0 10px !important;
+	}
+	.row{
+		width: 100%!important;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.row{
+		width: 80%!important;
+	}
+}
+/************************************************************************************/
+.item {
+	height:auto;
+	padding: 1px;
+	outline: 0px solid red;
+}
+.item>#simpleBlock{
+	display:inline-block;
+	width: 32%;
+}
+.item>#simpleBlock>a img{
+	display:inline-block  !important;
+	margin: 0 15px;
+	width: 80%;
+	/*
+	width:130px !important;
+	max-width: 130px;
+	*/
+}
