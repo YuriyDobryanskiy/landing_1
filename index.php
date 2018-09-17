@@ -30,14 +30,18 @@
     <link rel="stylesheet" href="css/main-style.css">
     <script src="js/jquery-3.3.1.min.js"></script>
 	
-	
+	<!---carousel--->
 	<link rel="stylesheet" href="css/css/docs.theme.min.css">
     <link rel="stylesheet" href="css/owlcarousel/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owlcarousel/assets/owl.theme.default.min.css">
 	
     <script src="js/vendors/jquery.min.js"></script>
     <script src="css/owlcarousel/owl.carousel.js"></script>
-
+	<!---carousel--->
+		
+	<!---masked--->
+	<script src="js/jquery.maskedinput.min.js"></script>
+	
 </head>
 <body>
     <div class="wrapper">
@@ -55,7 +59,7 @@
                             <li><a href="#">Партнери</a></li>
                         </ul>
                     </div>
-                    <div class="button"><!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!----->
+                    <div class="button">
                         <input type="button" value="отримати пропозицію">
                     </div>
                 </div>
@@ -67,10 +71,11 @@
                     <h2>Вивчайте їх поведінку, залучайте<br/>та збільшуйте продажі</h2>
                     <h3>Залиште свої контакти та отримайте<br/>унікальну пропозицію співпраці.</h3>
 					<!-----------------------FORM----------------------->
-                    <form action="form.php" method="post">
+					
+                    <form id="texts" method="post" action="javascript:void(null);" onsubmit="call('texts','results')">
                         <p>
                             <label>Номер телефону</label>
-                            <input type="text" name="tel">
+                            <input type="text" name="tel" id="telephone">
                         </p>
                         <p>
                             <label>Прізвище та ім'я</label>
@@ -80,6 +85,8 @@
                             <input type="submit" name="submit" value="отримати пропозицію">
                         </p>
                     </form>
+					<!-----------------------FORM----------------------->
+					<div id="results"></div>
 					<!-----------------------FORM----------------------->
                 </div>
                 <div id="image">
@@ -242,36 +249,18 @@
 						</div>
 					</div>
 				</div>
-			<!--
-                <div id="logo">
-                    <div id="slide">
-                        <img src="img/okko-logo.svg">
-                        <img src="img/okko-logo.svg">
-                        <img src="img/okko-logo.svg">
-                    </div>
-                    <div id="slide">
-                        <img src="img/okko-logo.svg">
-                        <img src="img/okko-logo.svg">
-                        <img src="img/okko-logo.svg">
-                    </div>
-                </div>
-                <div id="bullet">
-                    <input type="radio" name="slide">
-                    <input type="radio" name="slide">
-                    <input type="radio" name="slide">
-                </div>
-			-->
             </div>
-			<!------------------------------------------------------------------------------------------>
+			
             <div class="secondForm">
                 <img src="img/block3_round.png">
                 <div id="roundForm">
                     <h2>Збільшуйте свої конкурентні переваги з програмою </h2>
                     <h3>Залиште свої контакти та отримайте унікальну пропозицію співпраці.</h3>
-                    <form action="/" method="post">
+					<!-----------------------FORM----------------------->
+                    <form id="texts2" method="post" action="javascript:void(null);" onsubmit="call('texts2','results2')">
                         <p>
                             <label>Номер телефону</label>
-                            <input type="text" name="tel">
+                            <input type="text" name="tel" id="telephone2">
                         </p>
                         <p>
                             <label>Прізвище та ім'я</label>
@@ -281,6 +270,9 @@
                             <input type="submit" name="submit" value="отримати пропозицію">
                         </p>
                     </form>
+					<!-----------------------FORM----------------------->
+					<div id="results2"></div>
+					<!-----------------------FORM----------------------->
                 </div>
             </div>
             <div class="footerMenu">
@@ -294,38 +286,7 @@
         </div>
     </div>
 
-<srcript src="js/main-script.js"></srcript>
-    <script>
-        setInterval(function() {
-            var windHeight = innerHeight;
-            //$('.mainBlock').css({'height':windHeight})
-            //console.log(windowHeight);
-        }, 1000);
-    </script>
-	<script>
-            $(document).ready(function() {
-              var owl = $('.owl-carousel');
-              owl.owlCarousel({
-                margin: 10,
-                nav: false,
-                loop: true,
-				autoplay:true,
-				autoplayTimeout:6000,
-				autoplaySpeed: 2000,
-				autoplayHoverPause:true,
-                responsive: {
-                  0: {
-                    items: 1
-                  },
-                  600: {
-                    items: 2
-                  },
-                  1000: {
-                    items: 2
-                  }
-                }
-              })
-            })
-	</script>
+<script src="js/main-script.js"></script>
+<script src="js/owl-carousel.js"></script>
 </body>
 </html>
