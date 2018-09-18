@@ -60,7 +60,7 @@
                         </ul>
                     </div>
                     <div class="button">
-                        <input type="button" value="отримати пропозицію">
+                        <a href="#form"><input type="button" value="отримати пропозицію"></a>
                     </div>
                 </div>
             </div>
@@ -69,10 +69,9 @@
                 <div id="text">
                     <h1>4 млн клієнтів,<br/>які можуть стати вашими</h1>
                     <h2>Вивчайте їх поведінку, залучайте<br/>та збільшуйте продажі</h2>
-                    <h3>Залиште свої контакти та отримайте<br/>унікальну пропозицію співпраці.</h3>
-					<!-----------------------FORM----------------------->
-					
-                    <form id="texts" method="post" action="javascript:void(null);" onsubmit="call('texts','results')">
+                    <h3>Залиште свої контакти та отримайте<br/>унікальну пропозицію співпраці.</h3>					<!-----------------------FORM----------------------->
+
+                    <form id="texts" method="post" action="javascript:void(null);" onsubmit="call('texts')">
                         <p>
                             <label>Номер телефону</label>
                             <input type="text" name="tel" id="telephone">
@@ -81,13 +80,15 @@
                             <label>Прізвище та ім'я</label>
                             <input type="text" name="name">
                         </p>
+                        <div id="resultsErr"></div>
                         <p>
-                            <input type="submit" name="submit" value="отримати пропозицію">
+                            <input type="submit" name="submit" value="отримати пропозицію" class="openPopup">
                         </p>
                     </form>
-					<!-----------------------FORM----------------------->
-					<div id="results"></div>
-					<!-----------------------FORM----------------------->
+                    <!-----------------------FORM----------------------->
+                    <div id="results"></div>
+                    <div id="results-bg"></div>
+                    <!-----------------------FORM----------------------->
                 </div>
                 <div id="image">
                     <img src="img/block1_monitor.png" alt="monitor">
@@ -251,13 +252,13 @@
 				</div>
             </div>
 			
-            <div class="secondForm">
+            <div class="secondForm" id="form">
                 <img src="img/block3_round.png">
                 <div id="roundForm">
                     <h2>Збільшуйте свої конкурентні переваги з програмою </h2>
                     <h3>Залиште свої контакти та отримайте унікальну пропозицію співпраці.</h3>
 					<!-----------------------FORM----------------------->
-                    <form id="texts2" method="post" action="javascript:void(null);" onsubmit="call('texts2','results2')">
+                    <form id="texts2" method="post" action="javascript:void(null);" onsubmit="call('texts2')">
                         <p>
                             <label>Номер телефону</label>
                             <input type="text" name="tel" id="telephone2">
@@ -266,12 +267,13 @@
                             <label>Прізвище та ім'я</label>
                             <input type="text" name="name">
                         </p>
+                        <div id="resultsErr"></div>
                         <p>
                             <input type="submit" name="submit" value="отримати пропозицію">
                         </p>
                     </form>
 					<!-----------------------FORM----------------------->
-					<div id="results2"></div>
+
 					<!-----------------------FORM----------------------->
                 </div>
             </div>
