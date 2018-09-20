@@ -5,6 +5,9 @@ $(function(){
 $(function(){
 	$("#telephone2").mask("+38(099) 999-99-99");
 });
+$(function(){
+    $(".mobPhone").mask("+38(099) 999-99-99");
+});
 /*PHONE mask*/
 
 /*AJAX*/
@@ -12,10 +15,25 @@ function call(x) {
 	var tel = $("#"+x+">p>input[name='tel']").val();
 	var name = $("#"+x+">p>input[name='name']").val();
 		
-	if (tel.length == 0 || name.length == 0){
-		$("#"+x+">#resultsErr").text('Заповніть усі поля');
+	if ((tel.length == 0 || name.length == 0) && x == 'texts'){
+		//$("#"+x+">#resultsErr").text('Заповніть усі поля');
+        if (tel.length == 0){$("#"+x+">p>input[name='tel']").css({border: "1px solid white"})}
+        if (name.length == 0){$("#"+x+">p>input[name='name']").css({border: "1px solid white"})}
+        if (tel.length != 0){$("#"+x+">p>input[name='tel']").css({border: "1px solid #ce4040"})}
+        if (name.length != 0){$("#"+x+">p>input[name='name']").css({border: "1px solid #ce4040"})}
 	}
-
+	else if((tel.length == 0 || name.length == 0) && x == 'texts2'){
+        if (tel.length == 0){$("#"+x+">p>input[name='tel']").css({border: "1px solid #ce4040"})}
+        if (name.length == 0){$("#"+x+">p>input[name='name']").css({border: "1px solid #ce4040"})}
+        if (tel.length != 0){$("#"+x+">p>input[name='tel']").css({border: "1px solid white"})}
+        if (name.length != 0){$("#"+x+">p>input[name='name']").css({border: "1px solid white"})}
+    }
+    else if((tel.length == 0 || name.length == 0) && x == 'texts3'){
+        if (tel.length == 0){$("#"+x+">p>input[name='tel']").css({border: "1px solid white"})}
+        if (name.length == 0){$("#"+x+">p>input[name='name']").css({border: "1px solid white"})}
+        if (tel.length != 0){$("#"+x+">p>input[name='tel']").css({border: "1px solid #ce4040"})}
+        if (name.length != 0){$("#"+x+">p>input[name='name']").css({border: "1px solid #ce4040"})}
+    }
 	else{
 		/*AJAX*/
 		$("#"+x+">#resultsErr").text('');

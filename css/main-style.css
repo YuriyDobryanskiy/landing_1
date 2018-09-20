@@ -99,7 +99,7 @@
 /**************************************************************************************/
 .mainBlock>.textBlock{
     background: transparent url(../img/block1_bg2.png) no-repeat center 70% / 100%;
-    padding: 90px 0 7%;
+    padding: 90px 0 4%;
 }
 .mainBlock>.textBlock::after{
     content: '';
@@ -163,6 +163,9 @@
     width: 85%;
     padding: 0 15px;
     box-sizing: border-box;
+    font-family: 'RotondaCBold';
+    font-size: 17px;
+    color: black;
 }
 .mainBlock>.textBlock>#text>form p:nth-child(3){
     text-align: right;
@@ -183,7 +186,10 @@
 .mainBlock>.textBlock>#text a{
 	text-decoration:none;
 }
-	
+.mainBlock>.textBlock>#text>form p:nth-child(3) {
+    text-align: right;
+    padding-right: 15%;
+}
 /*form*/
 /**************************************************************************************/
 .opportunities{
@@ -266,7 +272,7 @@
     font-family: 'RotondaCBold';
     font-size: 28px;
     color: black;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
     text-align: center;
 }
 .partners>.advantages{
@@ -363,7 +369,7 @@
     font-family: 'RotondaCBold';
     font-size: 26px;
     color: black;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .partners>.secondForm>#roundForm h3{
     font-family: 'RobotoLight';
@@ -376,7 +382,7 @@
     font-family: 'RobotoMedium';
     font-size: 12px;
     color: black;
-    margin: 20px 0 5px;
+    margin: 10px 0 5px;
     text-align: left;
     display: block;
     text-transform: uppercase;
@@ -390,6 +396,10 @@
     height: 35px;
     padding: 0 15px;
     box-sizing: border-box;
+
+    font-family: 'RotondaCBold';
+    font-size: 17px;
+    color: black;
 }
 .partners>.secondForm>#roundForm form input[type='submit']{
     display: block;
@@ -407,6 +417,7 @@
 
 
 .partners>.footerMenu{
+    text-align: right;
     margin-bottom: 20px;
     color: #f04d51;
 }
@@ -416,7 +427,7 @@
 .partners>.footerMenu>#copyright{
     font-family: 'RobotoMedium';
     font-size: 14px;
-    margin-right: 13%;
+    margin-right: 0%;
 }
 .partners>.footerMenu>#menu{width: 50%;}
 .partners>.footerMenu>#menu li{
@@ -434,6 +445,10 @@
     color: #f04d51;
 }
 
+
+.mainBlock>.textBlock>.showForm{
+    display: none;
+}
 /*************************************POPUP************************************************/
 #results{
     width:300px;
@@ -459,68 +474,264 @@
 }
 
 /**************************************************************************************/
+@media screen and (max-width: 1200px) {
+    .mainBlock>.textBlock {
+        padding: 90px 0 7%;
+    }
+}
 @media screen and (max-width: 1024px) {
-  .mainBlock>.textBlock>#image{
+    .mainBlock>.textBlock>#image{
 	  padding:0;
-  }
-  .mainBlock>.textBlock>#image img{
+    }
+    .mainBlock>.textBlock>#image img{
 	  width:100%;
-  }
-  .item>a>img{
-	  
-  }
+    }
+    .partners>.secondForm>#roundForm {
+      padding: 100px 10% 100px;
+    }
+    .partners>.secondForm>#roundForm form label {
+        font-size: 11px;
+    }
 }
 
 @media screen and (max-width: 768px) {
 	.mainBlock {
-	border-bottom-right-radius: 220% 80% !important;
-    border-bottom-left-radius: 220% 80% !important;
+	    border-bottom-right-radius: 220% 80% !important;
+        border-bottom-left-radius: 220% 80% !important;
 	}
 	.opportunities{
-	border-bottom-right-radius: 220% 60% !important;
-    border-bottom-left-radius: 220% 60% !important;
+	    border-bottom-right-radius: 220% 60% !important;
+        border-bottom-left-radius: 220% 60% !important;
 	}
 	
-	.mainBlock>.textBlock>#image{
-	  display:none;
+	.mainBlock>.textBlock{
+        width: 90%!important;
+        margin: 0 0% 0 10%!important;
 	}
+    .mainBlock>.textBlock>#image{
+        padding:3% 0;
+    }
 	.mainBlock>.textBlock>#text {
-		width:100%;
-		box-sizing: border-box;
+        width: 55%;
+        padding-left: 4%!important;
 	}
 	.mainBlock>.textBlock>#text>form p:nth-child(3) {
-		text-align: center;
+		text-align: right;
 	}
-	
+    .menuWrapper>.menu>.logo {
+        text-align: left;
+    }
+    .menuWrapper>.menu>.logo>img {
+        width: 90%;
+        margin: 4px 0px;
+    }
+    .menuWrapper>.menu>.page li {
+        margin-right: 18px;
+    }
+    .menuWrapper>.menu>.button input[type='button'] {
+        padding: 0 10px;
+    }
+
 	.opportunities {
-		max-height: 1100px;
-		padding: 4% 0 0 !important;
+		max-height: 2500px;
+        padding: 4% 12% 4% !important;
+        box-sizing: border-box;
 	}
 	.opportunities>.allOpp {
-    grid-template-columns: repeat(1,1fr);
-		margin-bottom: 7% !important;
+        grid-template-columns: repeat(2,1fr);
+		margin-bottom: 0%;
+        width: 100% !important;
 	}
 	.opportunities>.allOpp #opp {
-		margin: 5px 2% !important;
+		margin: 5px 0 30px;
+        padding: 0 2%;
 	}
-	
+    .opportunities>.allOpp #opp h3{
+        margin-bottom: 15px!important;
+        margin-top: 0px;
+	}
+    .opportunities>.allOpp>#opp img {
+        width: 115px;
+    }
+
+    .partners{
+        padding-left: 12%;
+        padding-right: 12%;
+        box-sizing: border-box;
+    }
+    .partners>.partnersLogo{
+        width: 90%!important;
+    }
 	.partners>.advantages {
-		width: 70% !important;
+		width: 70%;
 	}
 	
 	.item>#simpleBlock>a img{
-	display:inline-block !important;
-	margin: 0 10px !important;
+	    display:inline-block !important;
+	    margin: 0 10px !important;
+        width: 92%!important;
 	}
 	.row{
-		width: 100%!important;
+		width: 100%;
 	}
+    .owl-theme .owl-dots .owl-dot span{
+        width: 12px!important;
+        height: 12px!important;
+    }
+    .partners>.secondForm>img{
+        width: 250px;
+        height: 250px;
+        top: -13%;
+        left: -10%;
+    }
+    .partners>.secondForm>#roundForm {
+        padding: 18% 15%;
+    }
+    .partners>.footerMenu{
+        width: 90%;
+    }
 }
 
 @media screen and (max-width: 600px) {
 	.row{
-		width: 80%!important;
+		width: 80%;
 	}
+}
+
+@media screen and (max-width: 425px) {
+    .mainBlock {
+        border-bottom-right-radius: 220% 40% !important;
+        border-bottom-left-radius: 220% 40% !important;
+    }
+    .opportunities{
+        border-bottom-right-radius: 220% 20% !important;
+        border-bottom-left-radius: 220% 20% !important;
+    }
+
+    .menuWrapper>.menu>.page{
+        display: none;
+    }
+    .mainBlock {
+        background-position: bottom right, right;
+    }
+    .mainBlock>.textBlock>#text h1 {
+        font-size: 30px;
+    }
+    .mainBlock>.textBlock>#text h2 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .mainBlock>.textBlock>#text h3 {
+        font-size: 14px;
+    }
+    .mainBlock>.textBlock>#image {
+        padding: 0;
+    }
+    .mainBlock>.textBlock>#text>.hideForm{
+        display: none;
+    }
+    .mainBlock>.textBlock>.showForm{
+        display: block;
+        width: 80% !important;
+    }
+    .mainBlock>.textBlock>.showForm>form p input[type='text'] {
+        width: 100% !important;
+        height: 40px !important;
+    }
+    .mainBlock>.textBlock>.showForm>form p:nth-child(3) {
+        /*text-align: right;*/
+        padding-right: 0!important;
+    }
+    .mainBlock>.textBlock>.showForm>form p input[type='submit']{
+        width: 100%;margin-bottom: 10px;height: 40px !important;
+    }
+    .mainBlock>.textBlock>.showForm>form p:nth-child(1){
+        margin-bottom: 10px;
+    }
+    .mainBlock>.textBlock>.showForm>form p:nth-child(2){
+        margin-bottom: 20px!important;
+    }
+
+    .opportunities>h2, .partners>h2 {
+        font-size: 25px;
+    }
+    .opportunities>.allOpp {
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .partners>.advantages {
+        width: 95%;
+        margin-bottom: 40px;
+    }
+    .partners>h2 {
+        margin-bottom: 20px;
+    }
+    .partners>.partnersLogo {
+        margin-bottom: 50px;
+    }
+
+    .partners>.secondForm>img {
+        display: none;
+    }
+    .partners>.secondForm>#roundForm {
+        margin-left: -35%;
+    }
+    .partners>.secondForm>#roundForm {
+        padding: 33% 30%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .menuWrapper>.menu>.button input[type='button'] {
+        padding: 0 5px;
+    }
+    .partners>.secondForm>#roundForm {
+        margin-left: -37%;
+    }
+    .partners>.secondForm>#roundForm {
+        padding: 20% 36%;
+    }
+    .partners>.secondForm>#roundForm {
+        width: 500px;
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .menuWrapper>.menu>.logo {
+        width: 40%;
+    }
+    .menuWrapper>.menu>.logo>img {
+        width: 90%;
+    }
+    .menuWrapper>.menu>.button input[type='button'] {
+        font-size: 12px;
+        height: 35px;
+    }
+
+    .mainBlock>.textBlock>#text h1 {
+        font-size: 25px;
+    }
+    .mainBlock>.textBlock>#text h2 {
+        font-size: 13px;
+    }
+    .mainBlock>.textBlock>#text h3 {
+        font-size: 11px;
+        margin-bottom: 15px;
+    }
+    .partners>.secondForm>#roundForm {
+        margin-left: -52%;
+    }
+    .partners>.secondForm>#roundForm {
+        padding: 26% 48%;
+    }
+    .partners>.advantages{
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: .5em;
+    }
+    .partners>.advantages>#adv1 {
+        padding: 2% 5%;
+    }
 }
 /************************************************************************************/
 .item {

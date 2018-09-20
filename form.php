@@ -1,10 +1,4 @@
 <?php
-echo "<pre>";
-print_r($_POST);
-echo "</pre>";
-
-
-
 /*----------------------------------------------------------------------------------------------*/
 include "function/func.php";
 
@@ -21,8 +15,25 @@ $tel = $fields->simpleField($_POST[tel]);
     $headers .= "Bcc: <ydobryansky@gng.com.ua> \r\n";
     $result = mail($to, $subject, $message, $headers);
 
-    //$result ? "<p>Повідомлення доставлено</p>" : "<p>Повідомлення не доставлено</p>";
+    if ($result){
+        echo "<p>Повідомлення доставлено</p>";
+        echo "<pre>";
+        print_r($_POST);
+        echo "</pre>";
+    }else{
+        "<p>Повідомлення не доставлено</p>";
+    }
 
 
-/**/
+$replaceText = new replaceText();
+$name = $replaceText->stringTrim($name);
+
+$list = array(array($name.";".$tel));
+$fp = fopen('file.csv', 'a');
+fputs($fp, $bom =( chr(0xEF) . chr(0xBB) . chr(0xBF) ));
+
+foreach ($list as $fields) {
+    fputcsv($fp,$fields);
+}
+fclose($fp);
 ?>

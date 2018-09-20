@@ -53,10 +53,9 @@
                     </div>
                     <div class="page">
                         <ul>
-                            <li><a href="#">Можливості</a></li>
-                            <li><a href="#">Переваги</a></li>
-                            <li><a href="#">Відгуки</a></li>
-                            <li><a href="#">Партнери</a></li>
+                            <li><a href="#opp">Можливості</a></li>
+                            <li><a href="#advan">Переваги</a></li>
+                            <li><a href="#partner">Партнери</a></li>
                         </ul>
                     </div>
                     <div class="button">
@@ -71,16 +70,15 @@
                     <h2>Вивчайте їх поведінку, залучайте<br/>та збільшуйте продажі</h2>
                     <h3>Залиште свої контакти та отримайте<br/>унікальну пропозицію співпраці.</h3>					<!-----------------------FORM----------------------->
 
-                    <form id="texts" method="post" action="javascript:void(null);" onsubmit="call('texts')">
+                    <form id="texts" class="hideForm" method="post" action="javascript:void(null);" onsubmit="call('texts')">
                         <p>
-                            <label>Номер телефону</label>
+                            <label for="telephone">Номер телефону</label>
                             <input type="text" name="tel" id="telephone">
                         </p>
                         <p>
-                            <label>Прізвище та ім'я</label>
-                            <input type="text" name="name">
+                            <label for="name">Прізвище та ім'я</label>
+                            <input type="text" name="name" id="name">
                         </p>
-                        <div id="resultsErr"></div>
                         <p>
                             <input type="submit" name="submit" value="отримати пропозицію" class="openPopup">
                         </p>
@@ -93,10 +91,30 @@
                 <div id="image">
                     <img src="img/block1_monitor.png" alt="monitor">
                 </div>
+
+                <div id="text" class="showForm">
+                    <form id="texts3" method="post" action="javascript:void(null);" onsubmit="call('texts3')">
+                        <p>
+                            <label for="telephone">Номер телефону</label>
+                            <input type="text" name="tel" id="telephone" class="mobPhone">
+                        </p>
+                        <p>
+                            <label for="name">Прізвище та ім'я</label>
+                            <input type="text" name="name" id="name">
+                        </p>
+                        <p>
+                            <input type="submit" name="submit" value="отримати пропозицію" class="openPopup">
+                        </p>
+                    </form>
+                    <!-----------------------FORM----------------------->
+                    <div id="results"></div>
+                    <div id="results-bg"></div>
+                    <!-----------------------FORM----------------------->
+                </div>
                 
             </div>
         </div>
-        <div class="opportunities">
+        <div class="opportunities" id="opp">
             <h2>Отримайте нові можливості з Fishka:</h2>
             <div class="allOpp">
                 <div id="opp">
@@ -143,8 +161,8 @@
                 </div>
             </div>
         </div>
-        <div class="partners">
-            <h2>Програма Fishka сьогодні – це:</h2>			
+        <div class="partners" id="advan">
+            <h2>Програма Fishka сьогодні – це:</h2>
             <div class="advantages">
                 <div id="adv1">
                         <h3>4 000 000</h3>
@@ -162,7 +180,7 @@
                     <p>клієнти використовують на винагороди щодня</p>
                 </div>
                 <div id="adv1">
-                    <h3>82%</h3>
+                    <h3 id="partner">82%</h3>
                     <h4>накопичених балів</h4>
                     <p>учасники програми використовують</p>
                 </div>
@@ -260,12 +278,12 @@
 					<!-----------------------FORM----------------------->
                     <form id="texts2" method="post" action="javascript:void(null);" onsubmit="call('texts2')">
                         <p>
-                            <label>Номер телефону</label>
+                            <label for="telephone2">Номер телефону</label>
                             <input type="text" name="tel" id="telephone2">
                         </p>
                         <p>
-                            <label>Прізвище та ім'я</label>
-                            <input type="text" name="name">
+                            <label for="name2">Прізвище та ім'я</label>
+                            <input type="text" name="name" id="name2">
                         </p>
                         <div id="resultsErr"></div>
                         <p>
@@ -278,12 +296,12 @@
                 </div>
             </div>
             <div class="footerMenu">
-                <div id="copyright">&#9400; myfishka.com</div>
-                <ul id="menu">
+                <!--div id="copyright">&#9400; myfishka.com</div-->
+                <!--ul id="menu">
                     <li><a href="#" target="_blank">Правила програми</a></li>
                     <li><a href="#" target="_blank">Ви запитуєте</a></li>
-                </ul>
-                <div id="mail"><a href="mailto:email@gng.com.ua">email@gng.com.ua</a></div>
+                </ul-->
+                <div id="copyright">&#9400; myfishka.com</div>
             </div>
         </div>
     </div>
