@@ -96,6 +96,10 @@
 	text-decoration:none;
 }
 
+/********hamburger******************/
+.menuWrapper>.menu>.page>.icon-menu{
+    display: none;
+}
 /**************************************************************************************/
 .mainBlock>.textBlock{
     background: transparent url(../img/block1_bg2.png) no-repeat center 70% / 100%;
@@ -608,7 +612,35 @@
         border-bottom-left-radius: 220% 20% !important;
     }
 
-    .menuWrapper>.menu>.page{
+    .menuWrapper>.menu>.page>.menuSmall, .menuWrapper>.menu>.page,.menuWrapper>.menu>.page>.menuSmall li, .menuWrapper>.menu>.page>.icon-menu{
+        display: block;
+    }
+    .menuWrapper>.menu>.page>.menuSmall{
+        border-top:1px solid white;
+        display: none;
+    }
+    .menuWrapper>.menu>.page>.menuSmall li a{
+        font-size: 16px;
+        padding: 10px 0 10px;
+        display: block;
+        color: white;
+    }
+    .menuWrapper>.menu>.page>.menuSmall li:nth-child(1){
+        margin-top: 5px;
+    }
+    .menuWrapper>.menu>.page>.menuSmall li:nth-child(3){
+        border-bottom: 0px;
+    }
+    .menuWrapper>.menu>.page>.menuSmall li{
+        border-bottom: 1px dotted white;
+        margin-right: 2px;
+        padding: 0 10px;
+    }
+    .menuWrapper>.menu>.page>.icon-menu svg{
+        fill: white;
+        padding: 5px 10px;
+    }
+    .menuWrapper>.menu>.button{
         display: none;
     }
     .mainBlock {
@@ -652,6 +684,7 @@
         margin-bottom: 20px!important;
     }
 
+    .opportunities {padding-top:8% !important;}
     .opportunities>h2, .partners>h2 {
         font-size: 25px;
     }
@@ -669,6 +702,9 @@
     .partners>.partnersLogo {
         margin-bottom: 50px;
     }
+    .owl-theme .owl-nav.disabled+.owl-dots {
+        margin-top: 20px !important;
+    }
 
     .partners>.secondForm>img {
         display: none;
@@ -679,6 +715,30 @@
     .partners>.secondForm>#roundForm {
         padding: 33% 30%;
     }
+
+    /*show all Opp*/
+    .allOpp{
+        height: 450px;
+        outline: 0px solid black !important;
+        overflow: hidden;
+    }
+    .arrDown{
+        width: 40px;
+        height: 27px;
+        background: url(../img/down.png) no-repeat 0 0;
+        background-size: 100%;
+        margin: 0px auto 0;
+        animation-name: blinker;
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(.19,.57,.73,.39);
+        animation-duration: 2.5s;
+    }
+    /*http://cubic-bezier.com/*/
+    @keyframes blinker {
+        from { opacity: 1.0; }
+        to { opacity: 0.0; }
+    }
+    /*show all Opp*/
 }
 
 @media screen and (max-width: 375px) {
@@ -745,7 +805,7 @@
 }
 .item>#simpleBlock>a img{
 	display:inline-block  !important;
-	margin: 0 15px;
+    margin: 0 5px !important;
 	width: 80%;
 	/*
 	width:130px !important;
