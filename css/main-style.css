@@ -455,8 +455,8 @@
 }
 /*************************************POPUP************************************************/
 #results{
-    width:300px;
-    height:300px;
+    width:320px;
+    height:200px;
     background-color:white;
     position:absolute;
     z-index:92;
@@ -465,6 +465,32 @@
     right:0;
     margin:auto;
     display: none;
+    border-radius: 13px;
+    text-align: center;
+    padding: 0 10px;
+}
+#results>#icon-close-popup{
+    text-align: right;
+    }
+#results>#icon-close-popup svg{
+    margin: 10px;
+    fill:rgb(239,64,70);
+    width: 24px;
+    cursor: pointer;
+}
+
+#results > h3{
+    font-family: 'RotondaCBold' !important;
+    font-size: 35px!important;
+    color: rgb(239,64,70)!important;
+    margin-bottom: 15px!important;
+}
+#results>p{
+    font-family: 'RobotoLight';
+    font-size: 17px;
+    color: black;
+    margin-bottom: 30px;
+    font-weight: bold;
 }
 #results.active{
     display: block !important;
@@ -602,7 +628,7 @@
 	}
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 430px) {
     .mainBlock {
         border-bottom-right-radius: 220% 40% !important;
         border-bottom-left-radius: 220% 40% !important;
@@ -696,6 +722,9 @@
         width: 95%;
         margin-bottom: 40px;
     }
+    .partners > .advantages > #adv1 h3{
+        font-size: 26px;
+    }
     .partners>h2 {
         margin-bottom: 20px;
     }
@@ -710,7 +739,7 @@
         display: none;
     }
     .partners>.secondForm>#roundForm {
-        margin-left: -35%;
+        margin: 0 -34%;
     }
     .partners>.secondForm>#roundForm {
         padding: 33% 30%;
@@ -728,20 +757,32 @@
         background: url(../img/down.png) no-repeat 0 0;
         background-size: 100%;
         margin: 0px auto 0;
-        animation-name: blinker;
-        animation-iteration-count: infinite;
-        animation-timing-function: cubic-bezier(.19,.57,.73,.39);
-        animation-duration: 2.5s;
+        /*animation-name: blinker;*/
+        /*animation-iteration-count: infinite;*/
+        /*animation-timing-function: cubic-bezier(.19,.57,.73,.39);*/
+        /*animation-duration: 2.5s;*/
     }
     /*http://cubic-bezier.com/*/
-    @keyframes blinker {
-        from { opacity: 1.0; }
-        to { opacity: 0.0; }
+    /*@keyframes blinker {*/
+        /*from { opacity: 1.0; }*/
+        /*to { opacity: 0.0; }*/
+    /*}*/
+
+    .arrDown::before{
+        content: "";
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 63%);
+        position: absolute;
+        bottom: 43px;
+        left: 10%;
+        height: 80px;
+        width: 80%;
+        display: block;
     }
+
     /*show all Opp*/
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 380px) {
     .menuWrapper>.menu>.button input[type='button'] {
         padding: 0 5px;
     }
@@ -749,11 +790,14 @@
         margin-left: -37%;
     }
     .partners>.secondForm>#roundForm {
-        padding: 20% 36%;
+        padding: 20% 30%;
     }
     .partners>.secondForm>#roundForm {
         width: 500px;
         height: 500px;
+    }
+    .arrDown::before {
+        bottom: 41px;
     }
 }
 
@@ -783,7 +827,7 @@
         margin-left: -52%;
     }
     .partners>.secondForm>#roundForm {
-        padding: 26% 48%;
+        padding: 26% 45%;
     }
     .partners>.advantages{
         grid-template-columns: repeat(1,1fr);
@@ -791,6 +835,9 @@
     }
     .partners>.advantages>#adv1 {
         padding: 2% 5%;
+    }
+    .arrDown::before {
+        bottom: 39px;
     }
 }
 /************************************************************************************/

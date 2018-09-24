@@ -27,12 +27,16 @@ $('.arrDown').click(function() {
         $('.allOpp').animate({"height":"450"}, 1000);
         toggle_stat = true;
         $('.arrDown').css({
-            'margin':'0px auto 0',
-            'transform':'rotate(0deg)'
+            'margin':'',
+            'transform':''
+        });
+        $('.arrDown::before').css({
+            'display':'block'
         });
     } else {
-        $('.allOpp').animate({"height":"980"}, 1000);
+        $('.allOpp').animate({"height":'100%'}, 1000);
         toggle_stat = false;
+        $('.arrDown::before').css('display','none');
         $('.arrDown').css({
             'margin':'-10px auto 0',
             'transform':'rotate(180deg)'
@@ -83,16 +87,16 @@ function call(x) {
 	    });
 
 	    //else
-        $('#results').css({'top':$(window).scrollTop()+ 150}).fadeIn();
+        $('#results').css({'top':$(window).scrollTop()+ 200}).fadeIn();
         $('#results-bg').fadeIn();
-
         $('#results-bg').click(function(){
             $('#results').fadeOut();
             $('#results-bg').fadeOut();
         });
 
+
     	$(window).scroll(function () {
-        	$('#results').css({'top':$(window).scrollTop()+ 150})
+        	$('#results').css({'top':$(window).scrollTop()+ 200})
     	}).scroll();
 	}
 }
