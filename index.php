@@ -74,7 +74,7 @@
                     <form id="texts" class="hideForm" method="post" action="javascript:void(null);" onsubmit="call('texts')">
                         <p>
                             <label for="telephone">Номер телефону</label>
-                            <input type="text" name="tel" id="telephone">
+                            <input type="tel" name="tel" id="telephone">
                         </p>
                         <p>
                             <label for="name">Прізвище та ім'я</label>
@@ -97,7 +97,7 @@
                     <form id="texts3" method="post" action="javascript:void(null);" onsubmit="call('texts3')">
                         <p>
                             <label for="telephone">Номер телефону</label>
-                            <input type="text" name="tel" id="telephone" class="mobPhone">
+                            <input type="tel" name="tel" id="telephone" class="mobPhone">
                         </p>
                         <p>
                             <label for="name">Прізвище та ім'я</label>
@@ -281,20 +281,16 @@
                     <form id="texts2" method="post" action="javascript:void(null);" onsubmit="call('texts2')">
                         <p>
                             <label for="telephone2">Номер телефону</label>
-                            <input type="text" name="tel" id="telephone2">
+                            <input type="tel" name="tel" id="telephone2">
                         </p>
                         <p>
                             <label for="name2">Прізвище та ім'я</label>
                             <input type="text" name="name" id="name2">
                         </p>
-                        <div id="resultsErr"></div>
                         <p>
                             <input type="submit" name="submit" value="отримати пропозицію">
                         </p>
                     </form>
-					<!-----------------------FORM----------------------->
-
-					<!-----------------------FORM----------------------->
                 </div>
             </div>
             <div class="footerMenu">

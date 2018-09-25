@@ -1,7 +1,7 @@
 /*PHONE mask*/
-$(function(){$("#telephone").mask("+38(099) 999-99-99");});
-$(function(){$("#telephone2").mask("+38(099) 999-99-99");});
-$(function(){$(".mobPhone").mask("+38(099) 999-99-99");});
+$(function(){$("#telephone").mask("+38 (099) 999-99-99");});
+$(function(){$("#telephone2").mask("+38 (099) 999-99-99");});
+$(function(){$(".mobPhone").mask("+38 (099) 999-99-99");});
 /*PHONE mask*/
 
 /*burger menu*/
@@ -87,7 +87,7 @@ function call(x) {
 	    });
 
 	    //else
-        $('#results').css({'top':$(window).scrollTop()+ 200}).fadeIn();
+        $('#results').css({'top':$(window).scrollTop() + ($(window).height()*0.3)}).fadeIn();
         $('#results-bg').fadeIn();
         $('#results-bg').click(function(){
             $('#results').fadeOut();
@@ -96,7 +96,7 @@ function call(x) {
 
 
     	$(window).scroll(function () {
-        	$('#results').css({'top':$(window).scrollTop()+ 200})
+        	$('#results').css({'top':$(window).scrollTop() + ($(window).height()*0.3)})
     	}).scroll();
 	}
 }
